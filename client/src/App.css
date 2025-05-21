@@ -1,0 +1,232 @@
+body {
+  margin: 0;
+  background-color: #121212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+}
+
+.App {
+  padding: 20px;
+  text-align: center;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+label, select, input {
+  color: #f0f0f0;
+  background-color: #3b3b3b;
+  border: 1px solid #555;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.seating {
+  display: inline-block;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.row {
+  margin: 5px 0;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.seat.available {
+  background-color: black;
+}
+
+.seat.vip {
+  background-color: #9c27b0;
+}
+
+.seat.accessible {
+  background-color: #4caf50;
+}
+
+.seat.no-children {
+  background-color: #ff9800;
+}
+
+.seat.selected {
+  background-color: #00bcd4 !important;
+  color: #000;
+}
+
+.seat.booked.user {
+  background-color: #f44336;
+}
+.seat.booked.vip {
+  background-color: #9c27b0;
+}
+.seat.booked.accessible {
+  background-color: #4caf50;
+}
+.seat.booked.admin {
+  background-color: #ff9800;
+}
+
+.seat.broken {
+  background-color: #757575; 
+  cursor: not-allowed;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+  color: #f0f0f0;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.modal-content button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #00bcd4;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #0097a7;
+}
+
+.seating::before {
+  content: 'SCREEN';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #444;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.auth-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.auth-form input, .auth-form select, .auth-form button {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+}
+
+.auth-form button {
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background-color: #0097a7;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #00bcd4;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.confirm-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #00e676;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.confirm-button:hover {
+  background-color: #00c853;
+}
+
+.confirm-button:disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.logout-button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
